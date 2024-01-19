@@ -1,7 +1,7 @@
 #!/bin/bash
 history -c 
-rm -fr project.sh
-rm -fr /etc/bot//kyt
+rm -fr xolva.sh
+rm -fr /etc/bot/xolva
 rm -fr /usr/bin/xdbot.zip*
 rm -fr /usr/bin/bot
 #color
@@ -22,6 +22,7 @@ apt install python3 python3-pip git
 cd /etc/bot/xolva
 wget -q -O xolva.zip "${REPO}xolva.zip"
 unzip xolva.zip
+rm -f xolva.zip
 pip3 install -r xolpanel/requirements.txt
 
 clear
@@ -30,8 +31,8 @@ echo -e "$u ┌─────────────────────�
 echo -e "$u │ \e[1;97;101m                ADD BOT PANEL                 ${NC} ${u}│${NC}"
 echo -e "$u └────────────────────────────────────────────────┘${NC}"
 echo -e "$u ┌────────────────────────────────────────────────┐${NC}"
-echo -e "$u │ ${g}Tutorial Creat Bot and ID Telegram                   ${NC}"
-echo -e "$u │ ${g}Creat Bot and Token Bot : @BotFather                 ${NC}"
+echo -e "$u │ ${g}Tutorial Create Bot and ID Telegram                   ${NC}"
+echo -e "$u │ ${g}Create Bot and Token Bot : @BotFather                 ${NC}"
 echo -e "$u │ ${g}Info Id Telegram : @MissRose_bot perintah /info      ${NC}"
 echo -e "$u └────────────────────────────────────────────────┘${NC}"
 echo -e ""
@@ -83,8 +84,7 @@ else
    sts_bot="${r}Offline${NC}"
 fi
 
-rm -fr /usr/bin/bot.zip
-rm -fr /usr/bin/xdbot.zip
+rm -fr /usr/bin/bot
 clear
 neofetch
 echo -e "  ${y} Your Data BOT Info"
@@ -97,5 +97,3 @@ echo -e "  ${u}│$r NS Domain  ${y}=$NC $NS "
 echo -e "  ${u}└───────────────────────────────────┘${NC}"
 echo -e ""
 history -c
-read -p " [*] Press [ Enter ] to back on menu"
-menu
